@@ -17,19 +17,19 @@
     </linearGradient>
 
     <linearGradient id="light-theme-primary">
-      <stop offset="1" stop-color="#1967d2"/>
+      <stop offset="1" stop-color="#7C6F64"/>
     </linearGradient>
 
     <linearGradient id="light-theme-on-primary">
-      <stop offset="1" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#7C6F64"/>
     </linearGradient>
 
     <linearGradient id="dark-theme-surface-z0">
-      <stop offset="1" stop-color="#121212"/>
+      <stop offset="1" stop-color="#282828"/>
     </linearGradient>
 
     <linearGradient id="dark-theme-surface-z8">
-      <stop offset="1" stop-color="#2e2e2e"/>
+      <stop offset="1" stop-color="#3c3836"/>
     </linearGradient>
 
     <linearGradient id="dark-theme-disabled-hint-on-surface">
@@ -37,11 +37,11 @@
     </linearGradient>
 
     <linearGradient id="dark-theme-primary">
-      <stop offset="1" stop-color="#8ab4f8"/>
+      <stop offset="1" stop-color="#7C6F64"/>
     </linearGradient>
 
     <linearGradient id="dark-theme-on-primary">
-      <stop offset="1" stop-color="#000000"/>
+      <stop offset="1" stop-color="#7C6F64"/>
     </linearGradient>
 
     <g id="base-scale-slider">

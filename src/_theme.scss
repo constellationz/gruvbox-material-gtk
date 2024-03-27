@@ -39,15 +39,15 @@ $circular-radius: 9999px;
 // Durations
 //
 
-$state-duration: 50ms;
-$ripple-duration: 100ms;
-$ripple-fade-out-duration: 100ms;
+$state-duration: 100ms;
+$ripple-duration: 200ms;
+$ripple-fade-out-duration: 200ms;
 $ripple-opacity-fade-out-duration: 200ms;
 
 @if $toolkit == "st" {
   // Tweak transition durations since St does not support transition-timing-function
-  $state-duration: 50ms;
-  $ripple-duration: 100ms;
+  $state-duration: 100ms;
+  $ripple-duration: 200ms;
 }
 
 //

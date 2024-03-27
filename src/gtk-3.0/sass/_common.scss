@@ -1923,6 +1923,7 @@ menubar,
   }
 
   .csd & {
+    border-radius: theme.$corner-radius;
     transition: theme.$transition;
   }
 
@@ -1965,7 +1966,7 @@ menu,
 
   .csd & {
     border: none; // axes borders in a composited env
-    border-radius: 0;
+    border-radius: theme.$corner-radius;
   }
 
   menuitem {

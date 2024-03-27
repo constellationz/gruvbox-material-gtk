@@ -9,10 +9,10 @@ $asset-suffix: if($dark-theme, "-dark", "");
 // Sizes
 //
 
-$container-padding: 6px;
+$container-padding: 4px;
 $small-size: 24px;
-$medium-size: 36px;
-$large-size: 48px;
+$medium-size: 32px;
+$large-size: 40px;
 
 @if $compact {
   $container-padding: 4px;
@@ -39,15 +39,15 @@ $circular-radius: 9999px;
 // Durations
 //
 
-$state-duration: 75ms;
-$ripple-duration: 225ms;
-$ripple-fade-out-duration: 300ms;
-$ripple-opacity-fade-out-duration: 1200ms;
+$state-duration: 50ms;
+$ripple-duration: 100ms;
+$ripple-fade-out-duration: 100ms;
+$ripple-opacity-fade-out-duration: 200ms;
 
 @if $toolkit == "st" {
   // Tweak transition durations since St does not support transition-timing-function
-  $state-duration: 100ms;
-  $ripple-duration: 200ms;
+  $state-duration: 50ms;
+  $ripple-duration: 100ms;
 }
 
 //

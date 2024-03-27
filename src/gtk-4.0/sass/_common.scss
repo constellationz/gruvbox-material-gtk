@@ -2102,9 +2102,7 @@ popover {
   }
 
   @at-root %popover-border {
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.3);
+    border: none;
     background-clip: padding-box;
   }
 
@@ -2119,7 +2117,7 @@ popover {
       border-radius: theme.$corner-radius;
     } @else {
       @extend %popover-border;
-      border-radius: theme.$corner-radius + 1px;
+      border-radius: theme.$corner-radius + 2px;
     }
 
     > list,

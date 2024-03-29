@@ -23,8 +23,8 @@ Materia requires the following build and runtime dependencies:
 1. Clone the repository and move into the project directory in terminal:
 
 ```sh
-git clone https://github.com/nana-4/materia-theme
-cd materia-theme
+git clone https://github.com/constellationz/gruvbox-material-gtk
+cd gruvbox-material-gtk 
 ```
 
 2. Configure the project using Meson (you can optionally set build options [as below](#build-options)):
@@ -45,14 +45,12 @@ Option | Default Value | Description
 --- | --- | ---
 `prefix` | `/usr` | Installation prefix
 `colors` | `default,light,dark` | List of color variants to build
-`sizes` | `default,compact` | List of size variants to build
-`gnome_shell_version` | n/a (auto) | Build GNOME Shell theme for specific version
 `gtk4_version` | n/a (auto) | Build GTK 4 theme for specific version
 
 Build options can be set at the configuration time, for example:
 
 ```sh
-meson _build -Dprefix="$HOME/.local" -Dcolors=default,dark -Dsizes=compact
+meson _build -Dprefix="$HOME/.local" -Dcolors=default,dark
 ```
 
 > Note: If you are a package maintainer, you should always set `gnome_shell_version` and `gtk4_version` in your package script based on the `gnome-shell` and `gtk4` package versions in your distribution. Otherwise, the corresponding themes may be built for wrong versions.

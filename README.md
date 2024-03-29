@@ -1,6 +1,6 @@
-# Materia Gruvbox
+# Gruvbox Material GTK
 
-Materia Gruvbox is a fork of [Materia Theme](https://github.com/nana-4/materia-theme) that flattens buttons, supporting GTK 2 and GTK 3.
+Gruvbox Material GTK is a fork of [Materia Theme](https://github.com/nana-4/materia-theme) that flattens buttons, supporting GTK 2 and GTK 3.
 
 ## Installation
 
@@ -10,7 +10,6 @@ Materia is distributed under the terms of the GNU General Public License, versio
 
 ## Acknowledgments
 
-- Materia Gruvbox is a fork of [Materia Theme](https://github.com/nana-4/materia-theme).
 - Materia is based on [Adwaita](HACKING.md#upstream-theme-sources) by GNOME.
 - Design and specifications are based on Google's [Material Design](https://material.io).
 - The included symbolic icons are based on [Material Design icons](https://github.com/google/material-design-icons) by Google.

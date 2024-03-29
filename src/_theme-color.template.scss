@@ -141,13 +141,6 @@ $titlebar-indicator: currentcolor;
   $on-titlebar: if(_is-dark(%BG%), %HDR_FG%, on($titlebar));
 }
 
-@if theme.$light-topbar {
-  $panel: $scrim;
-  $on-panel: on($panel);
-
-  $titlebar-indicator: $primary;
-}
-
 //
 // Overlay state colors
 //

@@ -1,6 +1,5 @@
 @use "@current_source_dir@/../theme" with (
   $dark-theme: true,
-  $light-topbar: false,
   $toolkit: "gtk3"
 );
 @use "@current_source_dir@/sass/common";

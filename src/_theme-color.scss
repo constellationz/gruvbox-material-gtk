@@ -141,20 +141,6 @@ $titlebar-indicator: currentcolor;
   $on-titlebar: on($titlebar);
 }
 
-@if theme.$light-topbar {
-  $panel: $scrim;
-  $on-panel: on($panel);
-
-  $panel-solid: #e0e0e0;
-  $on-panel-solid: on($panel-solid);
-
-  $titlebar: #f0f0f0;
-  $titlebar-backdrop: #ebebeb;
-  $on-titlebar: on($titlebar);
-
-  $titlebar-indicator: $primary;
-}
-
 //
 // Overlay state colors
 //

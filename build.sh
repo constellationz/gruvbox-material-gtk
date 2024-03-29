@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 # Build theme
 
-if [ ! -d _build ]; then
-  meson _build
+BUILD_DIR="_build"
+
+if [ ! -d $BUILD_DIR ]; then
+  meson $BUILD_DIR
 fi
 
-meson _build -Dprefix="$HOME/.local" -Dcolors=default,dark -Dsizes=compact --reconfigure && meson install -C _build
+meson $BUILD_DIR -Dprefix="$HOME/.local" --reconfigure
+meson install -C $BUILD_DIR

@@ -7,6 +7,6 @@ Encoding=UTF-8
 [X-GNOME-Metatheme]
 GtkTheme=@theme_name@
 MetacityTheme=@theme_name@
-IconTheme=Adwaita
-CursorTheme=Adwaita
+IconTheme=Gruvbox-Icons
+CursorTheme=Simp1e-Gruvbox-Dark
 CursorSize=24

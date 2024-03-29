@@ -116,7 +116,7 @@ $titlebar-indicator: currentcolor;
 
 @if theme.$dark-theme {
   $surface-z0: #282828;
-  $surface-z1: #303030;
+  $surface-z1: #282828;
   $surface-z8: #3c3836;
   $surface-switch-thumb: #504945;
   $on-surface: on($surface-z0);

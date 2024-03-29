@@ -1,7 +1,5 @@
 @use "@current_source_dir@/../theme" with (
   $dark-theme: @dark_theme@,
-  $light-topbar: @light_topbar@,
-  $compact: @compact@,
   $toolkit: "gtk4"
 );
 @use "@current_source_dir@/sass/gtk" with ($version: @version@);

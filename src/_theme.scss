@@ -1,6 +1,5 @@
 $dark-theme: false !default;
 $light-topbar: false !default;
-$compact: false !default;
 $toolkit: "none" !default;
 
 $asset-suffix: if($dark-theme, "-dark", "");
@@ -14,19 +13,8 @@ $small-size: 24px;
 $medium-size: 32px;
 $large-size: 40px;
 
-@if $compact {
-  $container-padding: 4px;
-  $small-size: 24px;
-  $medium-size: 32px;
-  $large-size: 40px;
-}
-
-$menu-item-height: 32px;
+$menu-item-height: 28px;
 $menu-item-dense-height: 28px;
-
-@if $compact {
-  $menu-item-height: 28px;
-}
 
 //
 // Radii

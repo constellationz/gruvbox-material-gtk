@@ -1,7 +1,7 @@
 option(
   'theme_name',
   type: 'string',
-  value: 'Material-Gruvbox',
+  value: 'Gruvbox-Material',
   description: 'Base theme name',
 )
 

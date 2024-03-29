@@ -16,6 +16,6 @@ Materia is distributed under the terms of the GNU General Public License, versio
 - Yauhen Kirylau (@actionless) who is oomox author polished scripts and supported Materia with [oomox](https://github.com/themix-project/oomox).
 - @n3oxmind who helped improve the installation script we had.
 - @smurphos who made and provided the Cinnamon theme for Materia.
-- Our Meson code is heavily influenced by @monday15's [lounge-gtk-theme](https://github.com/monday15/lounge-gtk-theme).
+- The Meson code is heavily influenced by @monday15's [lounge-gtk-theme](https://github.com/monday15/lounge-gtk-theme).
 
 Also thank you to all contributors and upstream developers.

@@ -13,10 +13,10 @@ Materia requires the following build and runtime dependencies:
 
 - `gnome-themes-extra` (or `gnome-themes-standard` for older distributions)
 - Murrine engine — The package name depends on the distro:
-  - `gtk-engine-murrine` on Arch Linux
-  - `gtk-murrine-engine` on Fedora
-  - `gtk2-engine-murrine` on openSUSE
-  - `gtk2-engines-murrine` on Debian, Ubuntu, etc.
+- `gtk-engine-murrine` on Arch Linux
+- `gtk-murrine-engine` on Fedora
+- `gtk2-engine-murrine` on openSUSE
+- `gtk2-engines-murrine` on Debian, Ubuntu, etc.
 
 ### Steps to install
 

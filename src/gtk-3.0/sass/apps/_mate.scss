@@ -1,11 +1,11 @@
 // Based on:
 // https://github.com/mate-desktop/mate-themes/blob/master/desktop-themes/Menta/gtk-3.0/mate-applications.css
 
-@use "../../../theme";
-@use "../../../theme-color";
-@use "../../../shadow";
+@use "sass:math";
 @use "../common";
 @use "../drawing";
+@use "../../../theme";
+@use "../../../theme-color";
 
 /**
  * Mate-Panel
@@ -327,7 +327,7 @@ na-tray-applet widget box widget {
 
     + button {
       margin: 0 4px 4px;
-      padding: (theme.$medium-size - 24px) / 2;
+      padding: math.div(theme.$medium-size - 24px, 2);
     }
   }
 }
@@ -366,7 +366,7 @@ na-tray-applet widget box widget {
   }
 
   .session-button {
-    padding: (theme.$large-size - 24px) / 2;
+    padding: math.div(theme.$large-size - 24px, 2);
   }
 
   .frame {
@@ -478,7 +478,7 @@ na-tray-applet widget box widget {
 .caja-desktop.view .entry {
   background-color: theme-color.$scrim-alt;
   color: theme-color.$on-dark;
-  text-shadow: shadow.$text-shadow;
+  text-shadow: none;
   caret-color: currentcolor; // this shouldn't be needed.
 
   &:selected {
@@ -601,7 +601,7 @@ na-tray-applet widget box widget {
 .lock-dialog {
   border: 1px solid theme-color.divider(theme-color.$on-surface);
   border-radius: theme.$corner-radius + 1px;
-  box-shadow: shadow.$z6, inset 0 1px theme-color.highlight(theme-color.$surface-z8); // not sure if box-shadow works here
+  box-shadow: none;
   background-clip: padding-box;
   background-color: theme-color.$surface-z8;
 

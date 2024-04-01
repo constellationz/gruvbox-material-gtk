@@ -2,7 +2,6 @@
 @use "sass:math";
 @use "../../../theme";
 @use "../../../theme-color";
-@use "../../../shadow";
 @use "../common";
 @use "../drawing";
 
@@ -91,8 +90,8 @@
 
   // for 3.32
   .nautilus-path-bar button:not(.suggested-action):not(.destructive-action) {
-    padding-left: (theme.$medium-size - 24px) / 2;
-    padding-right: (theme.$medium-size - 24px) / 2;
+    padding-left: math.div(theme.$medium-size - 24px, 2);
+    padding-right: math.div(theme.$medium-size - 24px, 2);
 
     &.text-button {
       min-width: 0;
@@ -145,7 +144,7 @@
   }
 
   button {
-    margin: (32px - theme.$small-size) / 2;
+    margin: math.div(32px - theme.$small-size, 2);
 
     @extend %button-small;
   }
@@ -388,12 +387,12 @@ dialog.background > box.dialog-vbox.vertical > grid.horizontal {
 
     &:last-child:dir(ltr),
     &:not(:first-child):dir(rtl) {
-      margin-left: -(theme.$container-padding) / 2;
+      margin-left: -1 * math.div(theme.$container-padding, 2);
     }
 
     &:first-child:dir(rtl),
     &:not(:last-child):dir(ltr) {
-      margin-right: -(theme.$container-padding) / 2;
+      margin-right: -1 * math.div(theme.$container-padding, 2);
     }
   }
 }
@@ -527,7 +526,7 @@ layouttabbar {
   }
 
   > box > button {
-    margin: (40px - theme.$medium-size) / 2 0;
+    margin: math.div(40px - theme.$medium-size, 2) 0;
     // border-radius: 0;
   }
 }
@@ -822,8 +821,8 @@ window.workbench preferences preferencesgroup list entry {
 
 button.run-arrow-button {
   // min-width: 12px;
-  padding-left: (theme.$medium-size - 16px) / 2;
-  padding-right: (theme.$medium-size - 16px) / 2;
+  padding-left: math.div(theme.$medium-size - 16px, 2);
+  padding-right: math.div(theme.$medium-size - 16px, 2);
 }
 
 //
@@ -985,7 +984,7 @@ GdMainIconView.content-view {
 .documents-counter {
   margin: 8px;
   border-radius: theme.$circular-radius;
-  box-shadow: shadow.$z4;
+  box-shadow: none;
   background-color: theme-color.$primary;
   color: theme-color.$on-primary;
   font-weight: bold;
@@ -1031,7 +1030,7 @@ button.photos-filter-preview {
 
     image {
       color: theme-color.$on-dark;
-      -gtk-icon-shadow: shadow.$text-shadow;
+      -gtk-icon-shadow: none;
     }
   }
 }
@@ -1151,7 +1150,7 @@ task-list-view {
   }
 
   > box > revealer > box > button {
-    margin: (12px * 2 - theme.$medium-size) / 2;
+    margin: math.div(12px * 2 - theme.$medium-size, 2);
 
     .dim-label {
       color: inherit;
@@ -1178,7 +1177,7 @@ tasklistview {
   }
 
   > box > revealer > box > button {
-    margin: (12px * 2 - theme.$medium-size) / 2;
+    margin: math.div(12px * 2 - theme.$medium-size, 2);
 
     .dim-label {
       color: inherit;

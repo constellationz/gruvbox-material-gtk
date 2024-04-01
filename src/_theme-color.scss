@@ -18,7 +18,7 @@
 // Determine whether the color is dark.
 @function _is-dark($color) {
   // Calculate color brightness as per https://www.w3.org/TR/AERT/#color-contrast
-  $brightness: (color.red($color) * 299 + color.green($color) * 587 + color.blue($color) * 114) / 1000;
+  $brightness: math.div(color.red($color) * 299 + color.green($color) * 587 + color.blue($color) * 114, 1000);
 
   @return if($brightness < 128, true, false);
 }

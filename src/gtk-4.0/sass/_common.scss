@@ -1,7 +1,8 @@
-@use "../../theme";
-@use "../../theme-color";
 @use "gtk";
 @use "drawing";
+@use "sass:math";
+@use "../../theme";
+@use "../../theme-color";
 
 /**
  * Base States
@@ -244,7 +245,7 @@ spinner {
  */
 
 @function pt($size: $font-size) {
-  @return ($size * .75 / 1px) * 1pt;
+  @return calc($size * .75 / 1px) * 1pt;
 }
 
 .large-title {
@@ -375,11 +376,11 @@ entry {
     }
 
     &.left {
-      margin-left: (theme.$medium-size - theme.$small-size) / 2 - 8px;
+      margin-left: math.div(theme.$medium-size - theme.$small-size, 2) - 8px;
     }
 
     &.right {
-      margin-right: (theme.$medium-size - theme.$small-size) / 2 - 8px;
+      margin-right: math.div(theme.$medium-size - theme.$small-size, 2) - 8px;
     }
   }
 
@@ -535,7 +536,7 @@ treeview entry {
 button {
   min-height: 24px;
   min-width: 16px;
-  padding: (theme.$medium-size - 24px) / 2 (theme.$medium-size - 16px) / 2;
+  padding: math.div(theme.$medium-size - 24px, 2) math.div(theme.$medium-size - 16px, 2);
   border-radius: theme.$corner-radius;
   background-color: theme-color.$surface-z8;
   color: theme-color.$on-surface;
@@ -570,7 +571,7 @@ button {
 
   &.image-button {
     min-width: 24px;
-    padding: (theme.$medium-size - 24px) / 2;
+    padding: math.div(theme.$medium-size - 24px, 2);
     border-radius: theme.$circular-radius;
   }
 
@@ -669,15 +670,15 @@ button.flat {
 
   &.text-button.image-button {
     min-width: 24px;
-    padding: (theme.$medium-size - 24px) / 2;
+    padding: math.div(theme.$medium-size - 24px, 2);
 
     label {
       &:first-child {
-        margin-left: 12px - (theme.$medium-size - 24px) / 2;
+        margin-left: 12px - math.div(theme.$medium-size - 24px, 2);
       }
 
       &:last-child {
-        margin-right: 12px - (theme.$medium-size - 24px) / 2;
+        margin-right: 12px - math.div(theme.$medium-size - 24px, 2);
       }
     }
   }
@@ -697,10 +698,10 @@ button.flat {
 button {
   // big standalone buttons like in Documents pager
   &.osd {
-    padding: (theme.$large-size - 24px) / 2 (theme.$large-size - 16px) / 2;
+    padding: math.div(theme.$large-size - 24px, 2) math.div(theme.$large-size - 16px, 2);
 
     &.image-button {
-      padding: (theme.$large-size - 24px) / 2;
+      padding: math.div(theme.$large-size - 24px, 2);
     }
 
     &:disabled {
@@ -1058,11 +1059,11 @@ spinbutton {
       }
 
       &.up:dir(ltr) {
-        margin-right: (theme.$medium-size - theme.$small-size) / 2 - 8px;
+        margin-right: math.div(theme.$medium-size - theme.$small-size, 2) - 8px;
       }
 
       &.up:dir(rtl) {
-        margin-left: (theme.$medium-size - theme.$small-size) / 2 - 8px;
+        margin-left: math.div(theme.$medium-size - theme.$small-size, 2) - 8px;
       }
     }
   }
@@ -1218,8 +1219,8 @@ combobox {
 
     min-height: 16px;
     min-width: 16px;
-    margin: (theme.$medium-size - theme.$small-size) / 2;
-    padding: (theme.$small-size - 16px) / 2;
+    margin: math.div(theme.$medium-size - theme.$small-size, 2);
+    padding: math.div(theme.$small-size - 16px, 2);
     border-radius: theme.$circular-radius;
   }
 }
@@ -1342,7 +1343,6 @@ button.combo:only-child {
 }
 
 %toolbar-osd {
-  transition: theme.$transition-shadow;
   padding: theme.$container-padding;
   border-spacing: theme.$container-padding;
   border-radius: theme.$corner-radius;
@@ -1552,8 +1552,8 @@ windowcontrols {
   // FIXME: Ugly overriding
   .path-bar button:not(.suggested-action):not(.destructive-action).text-button {
     min-width: 0;
-    padding-left: (theme.$medium-size - 24px) / 2;
-    padding-right: (theme.$medium-size - 24px) / 2;
+    padding-left: math.div(theme.$medium-size - 24px, 2);
+    padding-right: math.div(theme.$medium-size - 24px, 2);
   }
 
   &.selection-mode {
@@ -1687,14 +1687,14 @@ headerbar > windowhandle > box {
   }
 
   separator.titlebutton {
-    margin-top: theme.$large-size / 4;
-    margin-bottom: theme.$large-size / 4;
+    margin-top: math.div(theme.$large-size, 4);
+    margin-bottom: math.div(theme.$large-size, 4);
     background-color: theme-color.divider(theme-color.$on-titlebar);
   }
 
   switch {
-    margin-top: (theme.$large-size - 24px) / 2;
-    margin-bottom: (theme.$large-size - 24px) / 2;
+    margin-top: math.div(theme.$large-size - 24px, 2);
+    margin-bottom: math.div(theme.$large-size - 24px, 2);
   }
 
   // reset button margins of the spinbutton
@@ -1722,8 +1722,8 @@ window.devel .titlebar:not(.selection-mode) {
 pathbar.linked:not(.vertical) > button {
   @extend %button-flat-basic;
 
-  padding-left: (theme.$medium-size - 24px) / 2;
-  padding-right: (theme.$medium-size - 24px) / 2;
+  padding-left: math.div(theme.$medium-size - 24px, 2);
+  padding-right: math.div(theme.$medium-size - 24px, 2);
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
                                 theme-color.$primary 0%,
                                 transparent 0%)
@@ -1758,8 +1758,8 @@ pathbar.linked:not(.vertical) > button {
   }
 
   &.slider-button {
-    padding-left: (24px - 16px) / 2;
-    padding-right: (24px - 16px) / 2;
+    padding-left: math.div(24px - 16px, 2);
+    padding-right: math.div(24px - 16px, 2);
   }
 }
 
@@ -2090,7 +2090,6 @@ popover {
 
   > arrow,
   > contents {
-    transition: theme.$transition-shadow;
     box-shadow: none;
     background-color: theme-color.$surface-z8;
     color: theme-color.$on-surface;
@@ -2558,8 +2557,8 @@ check,
 radio {
   min-height: 24px;
   min-width: 24px;
-  margin: -($check-radio-size - 24px) / 2;
-  padding: ($check-radio-size - 24px) / 2;
+  margin: -1 * math.div($check-radio-size - 24px, 2);
+  padding: math.div($check-radio-size - 24px, 2);
   border-radius: theme.$circular-radius;
   color: theme-color.hint(theme-color.$on-surface);
   @extend %ripple;
@@ -2601,10 +2600,10 @@ radio {
     -gtk-icon-source: -gtk-recolor(url("icons/radio-mixed-symbolic.svg"));
   }
 
-  border-image-slice: $check-radio-size / 2px;
-  border-image-width: $check-radio-size / 2;
+  border-image-slice: math.div($check-radio-size, 2px);
+  border-image-width: math.div($check-radio-size, 2);
 
-  $radio-indicator-size: 10px / $check-radio-size / 2;
+  $radio-indicator-size: math.div(10px, math.div($check-radio-size, 2));
 
   border-image-source: radial-gradient(circle, theme-color.$primary 0%, transparent 0%);
 
@@ -2698,35 +2697,35 @@ scale {
 
   $slider_size: 32px;
 
-  $slider_margin: -($slider_size - $trough_size) / 2;
-  $finetune_slider_margin: -($slider_size - $finetune_trough_size) / 2;
+  $slider_margin: -1 * math.div($slider_size - $trough_size, 2);
+  $finetune_slider_margin: -1 * math.div($slider_size - $finetune_trough_size, 2);
 
-  $color_slider_margin: -($slider_size) * 3 / 4;
+  $color_slider_margin: -$slider_size * 0.75;
   $color_marks_slider_margin: -($slider_size - 16px) - $color_slider_margin;
 
   min-height: $trough_size;
   min-width: $trough_size;
 
   &.horizontal {
-    padding: (theme.$medium-size - $trough_size) / 2 12px;
+    padding: math.div(theme.$medium-size - $trough_size, 2) 12px;
   }
 
   &.vertical {
-    padding: 12px (theme.$medium-size - $trough_size) / 2;
+    padding: 12px math.div(theme.$medium-size - $trough_size, 2);
   }
 
   // click-and-hold the slider to activate
   &.fine-tune {
     &.horizontal {
       min-height: $finetune_trough_size;
-      padding-top: (theme.$medium-size - $finetune_trough_size) / 2;
-      padding-bottom: (theme.$medium-size - $finetune_trough_size) / 2;
+      padding-top: math.div(theme.$medium-size - $finetune_trough_size, 2);
+      padding-bottom: math.div(theme.$medium-size - $finetune_trough_size, 2);
     }
 
     &.vertical {
       min-width: $finetune_trough_size;
-      padding-left: (theme.$medium-size - $finetune_trough_size) / 2;
-      padding-right: (theme.$medium-size - $finetune_trough_size) / 2;
+      padding-left: math.div(theme.$medium-size - $finetune_trough_size, 2);
+      padding-right: math.div(theme.$medium-size - $finetune_trough_size, 2);
     }
 
     // to make the trough grow in fine-tune mode
@@ -3065,8 +3064,8 @@ window.dialog.print {
 
 frame,
 .frame {
-  // border: 1px solid divider($on-surface);
-  border-radius: theme.$corner-radius;
+  border: 1px solid theme-color.divider(theme-color.$on-surface);
+  border-radius: 0;
   box-shadow: none;
   background-color: theme-color.$surface-z1;
   color: theme-color.$on-surface;
@@ -3888,7 +3887,6 @@ colorswatch {
   // sports a bigger radius.
   // nth-child is needed by the custom color strip.
 
-  transition: theme.$transition-shadow;
   box-shadow: none;
 
   &:drop(active),
@@ -3951,7 +3949,6 @@ colorswatch {
 
 // colorscale popup
 colorchooser .popover.osd {
-  transition: theme.$transition-shadow;
   border-radius: theme.$corner-radius;
   box-shadow: none;
   background-color: theme-color.$surface-z8;
@@ -3993,9 +3990,7 @@ colorchooser .popover.osd {
 
 window {
   &.csd {
-    transition: theme.$transition-shadow;
-    border-radius: theme.$corner-radius theme.$corner-radius 0 0;
-    border-radius: theme.$corner-radius;
+    border-radius: 0;
     box-shadow: none;
 
     &:backdrop {

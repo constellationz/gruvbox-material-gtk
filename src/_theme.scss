@@ -26,14 +26,14 @@ $circular-radius: 9999px;
 // Durations
 //
 
-$state-duration: 100ms;
+$state-duration: 50ms;
 $ripple-duration: 200ms;
 $ripple-fade-out-duration: 200ms;
 $ripple-opacity-fade-out-duration: 200ms;
 
+// Tweak transition durations since St does not support transition-timing-function
 @if $toolkit == "st" {
-  // Tweak transition durations since St does not support transition-timing-function
-  $state-duration: 100ms;
+  $state-duration: 50ms;
   $ripple-duration: 200ms;
 }
 
@@ -51,4 +51,3 @@ $ease-in-out: cubic-bezier(.4, 0, .6, 1);
 //
 
 $transition: all $state-duration $ease-out;
-$transition-shadow: box-shadow $state-duration $ease-out;

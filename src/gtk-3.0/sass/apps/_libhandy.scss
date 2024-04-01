@@ -7,7 +7,6 @@
 
 @use "../../../theme";
 @use "../../../theme-color";
-@use "../../../shadow";
 
 // HdyComboRow
 
@@ -237,10 +236,10 @@ button.list-button {
 window.csd.unified:not(.solid-csd):not(.maximized):not(.fullscreen):not(.tiled):not(.tiled-top):not(.tiled-bottom):not(.tiled-left):not(.tiled-right) {
   // Remove the sheen on headerbar...
   headerbar {
-    box-shadow: shadow.$z1;
+    box-shadow: none;
 
     &.selection-mode {
-      // box-shadow: $shadow-z1;
+      // box-shadow: none;
     }
   }
 

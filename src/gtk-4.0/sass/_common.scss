@@ -1409,7 +1409,7 @@ windowcontrols {
 
 .titlebar {
   transition: background-color theme.$state-duration theme.$ease-out, color theme.$state-duration theme.$ease-out;
-  border-radius: 0
+  border-radius: 0;
   box-shadow: none;
   background-color: theme-color.$titlebar;
   color: theme-color.$on-titlebar;

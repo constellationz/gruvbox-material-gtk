@@ -1397,7 +1397,7 @@ searchbar > revealer > box {
 
 .titlebar {
   transition: background-color theme.$state-duration theme.$ease-out, color theme.$state-duration theme.$ease-out;
-  border-radius: theme.$corner-radius theme.$corner-radius 0 0;
+  border-radius: 0;
   box-shadow: none;
   background-color: theme-color.$titlebar;
   color: theme-color.$on-titlebar;
@@ -3439,14 +3439,6 @@ messagedialog {
     }
   }
 
-  // rounded bottom border styling for csd version
-  &.csd {
-    &.background {
-      border-bottom-left-radius: theme.$border-radius;
-      border-bottom-right-radius: theme.$border-radius;
-    }
-  }
-
   // Hint text
   box.vertical > label + label {
     color: theme-color.hint(theme-color.$on-surface);
@@ -4047,7 +4039,7 @@ colorchooser .popover.osd {
  */
 
 decoration {
-  border-radius: theme.$corner-radius theme.$corner-radius 0 0;
+  border-radius: 0;
   box-shadow: none;
 
   // FIXME rationalize shadows
@@ -4084,12 +4076,7 @@ decoration {
   }
 
   messagedialog.csd & {
-    border-radius: theme.$corner-radius;
-    // box-shadow: none;
-
-    &:backdrop {
-      // box-shadow: none;
-    }
+    border-radius: 0;
   }
 
   .solid-csd & {
